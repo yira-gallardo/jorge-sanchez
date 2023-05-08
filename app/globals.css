@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;1,700&display=swap");
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --color-primario: #121a1d;
+  --color-primario-texto: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,12 +20,23 @@
   }
 }
 
+* {
+  font-family: "Barlow", sans-serif;
+}
+h2 {
+  font-weight: 900;
+  font-style: italic;
+  font-size: 128px;
+}
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--color-primario);
+  color: var(--color-primario-texto);
+}
+
+@media (max-width: 1000px) {
+  h2 {
+    font-weight: 900;
+    font-style: italic;
+    font-size: 64px;
+  }
 }
